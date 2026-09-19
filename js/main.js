@@ -85,15 +85,17 @@
 
   function setupMarquee(track) {
     var marquee = track.parentElement;
-    var SPEED = 35; /* px per second */
+    var phone = window.matchMedia("(max-width: 768px)");
+    function speed() { return phone.matches ? 35 : 85; } /* px per second */
     var resumeTimer;
 
     function setDuration() {
       var loopWidth = track.scrollWidth / 2;
-      if (loopWidth) marquee.style.setProperty("--marquee-duration", Math.round(loopWidth / SPEED) + "s");
+      if (loopWidth) marquee.style.setProperty("--marquee-duration", Math.round(loopWidth / speed()) + "s");
     }
     setDuration();
     window.addEventListener("resize", setDuration);
+    phone.addEventListener("change", setDuration);
 
     function pause() {
       clearTimeout(resumeTimer);
