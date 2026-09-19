@@ -520,10 +520,14 @@ section{ padding-block:clamp(56px,8vw,92px); position:relative; }
   display:flex;
   gap:var(--gap);
   width:max-content;
-  animation:marquee 80s linear infinite;
+  animation:marquee var(--marquee-duration, 240s) linear infinite;
 }
-.marquee:hover .marquee-track,
+.marquee{ touch-action:pan-y; }
+.marquee.is-paused .marquee-track,
 .marquee-track:focus-within{ animation-play-state:paused; }
+@media (hover:hover){
+  .marquee:hover .marquee-track{ animation-play-state:paused; }
+}
 
 @keyframes marquee{
   from{ transform:translateX(0); }
@@ -534,7 +538,7 @@ section{ padding-block:clamp(56px,8vw,92px); position:relative; }
 }
 
 .t-card{
-  flex:0 0 320px;
+  flex:0 0 min(320px, 82vw);
   background:var(--surface);
   border:1px solid var(--line);
   border-radius:var(--radius);

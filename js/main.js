@@ -80,6 +80,32 @@
   if (track) {
     var html = testimonials.map(renderCard).join("");
     track.innerHTML = html + html; /* duplicated once for a seamless loop */
+    setupMarquee(track);
+  }
+
+  function setupMarquee(track) {
+    var marquee = track.parentElement;
+    var SPEED = 35; /* px per second */
+    var resumeTimer;
+
+    function setDuration() {
+      var loopWidth = track.scrollWidth / 2;
+      if (loopWidth) marquee.style.setProperty("--marquee-duration", Math.round(loopWidth / SPEED) + "s");
+    }
+    setDuration();
+    window.addEventListener("resize", setDuration);
+
+    function pause() {
+      clearTimeout(resumeTimer);
+      marquee.classList.add("is-paused");
+    }
+    function resumeSoon() {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function () { marquee.classList.remove("is-paused"); }, 4000);
+    }
+    marquee.addEventListener("pointerdown", pause);
+    marquee.addEventListener("pointerup", resumeSoon);
+    marquee.addEventListener("pointercancel", resumeSoon);
   }
 
   function initials(name) {
