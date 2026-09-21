@@ -35,51 +35,79 @@
   /* ---------- testimonials marquee ---------- */
   var testimonials = [
     { name: "Ananya Sharma", place: "Lucknow", tag: "Love Problem",
-      quote: "Pichle kuch mahino se mere aur mere partner ke beech kaafi misunderstanding chal rahi thi. Main bahut stressed thi aur samajh nahi aa raha tha kya karu. Yahan se guidance lene ke baad mujhe apni galtiyan samajh aayi aur humne calm ho kar baat ki. Ab humare relationship me wapas wahi warmth aur respect hai. Truly grateful!" },
-    { name: "Vikramaditya Roy", place: "Kolkata", tag: "Career Problem",
-      quote: "Career me lagatar setbacks milne ke wajah se mera confidence bilkul toot chuka tha. Direct consultation ke dauran jo career insights aur guidance mujhe mili, usne mera mindset change kar diya. Maine unki advice follow ki aur apni strengths par focus kiya. Aaj mujhe ek achhi MNC me promotion mil chuka hai." },
-    { name: "Pooja Deshmukh", place: "Pune", tag: "Love Marriage",
-      quote: "Arranged marriage ke liye kundli matching ko lekar hamari dono families thodi hesitant thi. Lekin session ke baad hamare saare doubts clear ho gaye. Har ek aspect ko bahut hi logical aur simple tarike se samjhaaya gaya, bina kisi darr ke. Thank you so much!" },
-    { name: "Rohan Malhotra", place: "Delhi", tag: "Business Problem",
-      quote: "Mere naye startup me pichle ek saal se kaafi losses ho rahe the aur main decision nahi le pa raha tha. Guidance ne mujhe sahi waqt par pivot karne aur right opportunities identify karne me madad ki. Aaj mera business stable ho raha hai aur mental peace bhi mil gayi hai." },
-    { name: "Sumanth Varma", place: "Hyderabad", tag: "Husband Wife Problem",
-      quote: "Shaadi ke kuch saalo baad hamare beech choti-choti baaton par jhagde hone lage the. Remedies try karne ke baad humari understanding me zameen aasmaan ka fark aaya hai. Unka empathetic approach aur simple guidance ne humari married life ko wapas track par laane me bohot help ki." },
-    { name: "Neha Kapoor", place: "Chandigarh", tag: "Family Problem",
-      quote: "Family me property aur personal matters ko lekar kaafi time se tanaav tha. Ghar ka mahool bahut negative lagta tha. Consultation lene ke baad situation me kafi positivity aayi hai. Jo remedies aur mindset tips batayi thi, unse ghar me sukoon mila hai." },
-    { name: "Aditya Joshi", place: "Ahmedabad", tag: "Relationship Problem",
-      quote: "Breakup ke baad main emotionally bilkul drain ho chuka tha aur severe anxiety se guzar raha tha. Session ne mujhe emotional stability di aur khud par bharosa karna sikhaya. Unhone kabhi fake promises nahi kiye, bas sahi direction dikhayi. Aaj main life me aage badh chuka hu." },
-    { name: "Kavita Nair", place: "Kochi", tag: "Career Problem",
-      quote: "Job switch karne ko lekar main bohot confused thi kyunki risk kaafi bada tha. Meri horoscope ke hisaab se right timing aur career path samjhaya gaya. Unki baat sun kar maine calculated decision liya aur aaj main apni nayi job me bohot successful hu." },
-    { name: "Deepak Verma", place: "Bhopal", tag: "Business Problem",
-      quote: "Naya showroom kholne me kaafi delay ho raha tha aur hurdles aate hi ja rahe the. Business astrology analysis ke zariye jo guidance di, usse humne sahi execution plans banaye. Aaj showroom smoothly chal raha hai. Koi superstitious baatein nahi ki gayi." },
-    { name: "Sneha Choudhury", place: "Guwahati", tag: "Love Marriage",
-      quote: "Hamare rishte me compatibility issues ki wajah se baat shaadi tak nahi pahunch rahi thi. Consultation ke baad humein samajh aaya ki ek doosre ke temperament ko kaise handle karna hai. Aaj dono families raazi hain. Best astrology experience ever!" },
-    { name: "Manish Tiwari", place: "Varanasi", tag: "Financial Problem",
-      quote: "Financial instability aur unexpected loans ki wajah se main bohot pareshan rehne laga tha. Milne wali remedies ne mujhe practical planning aur mental clarity di. Sahi direction milne se mere raste khulte gaye. Unka support mere liye bohot maayne rakhta hai." },
-    { name: "Priya Sengupta", place: "Patna", tag: "Love Marriage",
-      quote: "Late marriage ki wajah se family me sabhi log worried the. Horoscope analysis ne hume patience aur right perspective diya. Unhone jo time period bataya tha, usi dauran mujhe ek bohot hi understanding life partner mila. Unka humble nature aur clarity lajawab hai!" },
-    { name: "Siddharth Rao", place: "Bengaluru", tag: "Career Problem",
-      quote: "Abroad higher studies ke liye visa aur college selection me kaafi confusion tha. Astrology ke sath-sath practical career insights bhi mile. Unki guidance ne mujhe sahi stream decide karne me bohot help ki. Aaj main apni dream university me padh raha hu." },
-    { name: "Meenakshi Sundaram", place: "Madurai", tag: "Family Problem",
-      quote: "Joint family me daily misunderstanding aur negative aura ki wajah se mental stress rehta tha. Simple remedies aur guidance se ghar ka atmosphere bilkul badal gaya hai. Ab sabhi log ek doosre ki respect karte hain aur ghar me shanti hai." },
-    { name: "Harpreet Singh", place: "Ludhiana", tag: "Business Problem",
-      quote: "Naye business partner ke sath deal sign karne se pehle main thoda nervous tha. Business kundli check karke partnership prospective par bohot clear feedback diya gaya. Is decision se mera business safe raha aur aaj hum achha profit bana rahe hain." },
-    { name: "Shalini Pandey", place: "Indore", tag: "Ex Love Back",
-      quote: "Partner ke sath 6 mahine se communication gap bana hua tha aur baat bilkul band thi. Consultation ne mujhe patience rakhna aur right approach apnaana sikhaya. Aaj hum wapas saath hain aur pehle se zyada mature hain." },
-    { name: "Karan Mehta", place: "Surat", tag: "Career Problem",
-      quote: "Unexplained stress aur career instability ke karan main bohot disheartened mehsoos kar raha tha. Meri horoscope chart detailed tarike se explain ki gayi aur positivity maintain karne ke practical tarike bataye. Inka calm attitude hi aadhi pareshani door kar deta hai." },
-    { name: "Divya Saxena", place: "Dehradun", tag: "Love Marriage",
-      quote: "Dono families ke chart match karne ke liye humne contact kiya. Bina kisi darr ya fake hype ke bohot logically kundli matching details explain ki gayi. Dosh remedies bhi bohot simple aur practical thi. Hamari shaadi smoothly ho gayi. Highly grateful!" },
-    { name: "Tarun Chawla", place: "Amritsar", tag: "Relationship Problem",
-      quote: "Long-distance relationship me trust issues aane lage the aur breakup hone ki nobat aa gayi thi. Consultation se hume communication aur emotional understanding improve karne ki clarity mili. Unki advice ne humare bond ko strengthen kiya." },
-    { name: "Bhavna Kulkarni", place: "Nashik", tag: "Family Problem",
-      quote: "Shaadi ke baad in-laws ke saath adjust karne me bohot dikkat ho rahi thi. Compassionate advice aur simple astrological remedies ne meri life me bohot positivity bhari. Aaj mera ghar khushiyo se bhara hai. Very warm and genuine support!" }
+      quote: "For the past few months, my partner and I had been going through a lot of misunderstandings. I was extremely stressed and had no idea what to do. After taking Love Problem guidance, I understood my own mistakes and learned how to communicate more calmly. Today, our relationship has regained the same warmth and respect. Truly grateful!" },
+    { name: "Vikramaditya Roy", place: "Kolkata", tag: "Career Guidance",
+      quote: "After facing continuous setbacks in my career, I had completely lost my confidence. The insights and guidance I received during the consultation completely changed my perspective. I followed the advice and started focusing on my strengths. Today, I have received a promotion at a reputed MNC. Highly professional service!" },
+    { name: "Pooja Deshmukh", place: "Pune", tag: "Kundli Matching",
+      quote: "Our families were a little hesitant about our arranged marriage because of concerns regarding Kundli Matching. After the astrology session, all our doubts were explained clearly. Every aspect was discussed in a very simple and logical way without creating unnecessary fear. The guidance gave us the confidence to move forward. Thank you so much!" },
+    { name: "Rohan Malhotra", place: "Delhi", tag: "Business Consultation",
+      quote: "My new startup had been facing losses for almost a year, and I was struggling to make the right decisions. The business consultation helped me understand when to make changes and identify better opportunities. Today, my business is becoming more stable, and I have much more mental clarity. Genuine and honest guidance!" },
+    { name: "Sumanth Varma", place: "Hyderabad", tag: "Marriage Issues",
+      quote: "A few years into our marriage, we started arguing over even the smallest things. The marriage guidance and astrological remedies helped us understand each other much better. Their empathetic approach and simple guidance played a major role in bringing our married life back on track. Eternally thankful!" },
+    { name: "Neha Kapoor", place: "Chandigarh", tag: "Family Issues",
+      quote: "There had been constant tension in my family because of property and personal matters. The atmosphere at home had become extremely stressful. After taking Family Issues consultation, I started looking at the situation differently. The remedies and practical guidance helped bring more peace and positivity into our home. Five stars from me!" },
+    { name: "Aditya Joshi", place: "Ahmedabad", tag: "Relationship Guidance",
+      quote: "After my breakup, I felt emotionally drained and completely lost. The Relationship Guidance session helped me regain emotional stability and taught me to believe in myself again. They never made unrealistic promises; instead, they simply showed me the right direction. Today, I have moved forward in life and feel genuinely happy." },
+    { name: "Kavita Nair", place: "Kochi", tag: "Career Change",
+      quote: "I was extremely confused about changing my job because it felt like a very risky decision. During the consultation, my career path and the right timing were explained based on my horoscope. I made a well-thought-out decision and today I am doing really well in my new job. It was a very authentic experience!" },
+    { name: "Deepak Verma", place: "Bhopal", tag: "Business Growth",
+      quote: "I was facing repeated delays and obstacles while setting up my new showroom. Through business astrology analysis, I received guidance regarding Vastu and other aspects that helped us plan things more effectively. Today, the showroom is running smoothly. What I appreciated most was that there was no unnecessary fear or superstition involved." },
+    { name: "Sneha Choudhury", place: "Guwahati", tag: "Love & Compatibility",
+      quote: "Compatibility issues were creating problems in our relationship, and things were not progressing towards marriage. After the consultation, we understood each other's personalities and learned how to handle our differences better. The simple advice strengthened our bond, and today both our families are happy with our relationship. One of the best astrology experiences I've had!" },
+    { name: "Manish Tiwari", place: "Varanasi", tag: "Financial Stability",
+      quote: "I was under a lot of stress because of financial instability and unexpected loans. The career and financial guidance gave me better clarity and helped me focus on practical planning. There was no promise of any magical miracle, but I finally had a clear direction. Their support meant a lot to me." },
+    { name: "Priya Sengupta", place: "Patna", tag: "Marriage Consultation",
+      quote: "My family was becoming increasingly worried because of my delayed marriage. During the astrology consultation, my horoscope was explained in detail, which gave us patience and a much better perspective. Around the period discussed during the consultation, I met someone who turned out to be a very understanding life partner. Their humble nature and clarity are truly admirable!" },
+    { name: "Siddharth Rao", place: "Bengaluru", tag: "Higher Studies & Career",
+      quote: "I was confused about choosing the right college and planning my higher studies abroad. During the consultation, I received both astrological insights and practical career guidance. It helped me make a much more confident decision about my field of study. Today, I am studying at my dream university. Highly recommended for students and young professionals!" },
+    { name: "Meenakshi Sundaram", place: "Madurai", tag: "Family Harmony",
+      quote: "Living in a joint family had become stressful because of constant misunderstandings and disagreements. The simple remedies and family harmony guidance helped us create a much more peaceful environment at home. Everyone has become more understanding and respectful towards each other. Truly a wonderful experience!" },
+    { name: "Harpreet Singh", place: "Ludhiana", tag: "Business Partnership",
+      quote: "I was nervous about signing a business deal with a new partner. Before making the final decision, I consulted them and received a detailed analysis of the partnership. The guidance helped me evaluate the situation more carefully, and today our business relationship is going very well. Thank you for the honest and transparent advice!" },
+    { name: "Shalini Pandey", place: "Indore", tag: "Relationship Reconciliation",
+      quote: "My partner and I had been out of communication for almost six months, and things seemed completely over. The consultation taught me the importance of patience and taking the right approach instead of reacting emotionally. With time and positive guidance, many of our misunderstandings were resolved. Today, we are together again with a much more mature understanding of each other." },
+    { name: "Karan Mehta", place: "Surat", tag: "Personal Guidance & Mindset",
+      quote: "I was feeling extremely discouraged because of unexplained stress and career instability. My horoscope was explained in detail, along with practical ways to maintain a more positive mindset. After the session, I felt a lot more hopeful and mentally clear. Their calm and supportive approach itself brings a sense of comfort." },
+    { name: "Divya Saxena", place: "Dehradun", tag: "Kundli Matching & Marriage",
+      quote: "We contacted an online astrology expert for Kundli Matching before our marriage. Every detail was explained logically and honestly without creating unnecessary fear or hype. The suggested remedies were also simple and practical. Their transparent approach gave both families confidence, and our marriage went smoothly. Truly grateful!" },
+    { name: "Tarun Chawla", place: "Amritsar", tag: "Relationship Guidance",
+      quote: "Our long-distance relationship had started facing serious trust issues, and we were almost at the point of breaking up. The Relationship Guidance consultation helped us understand the importance of communication and emotional understanding. The advice gave us clarity and helped strengthen our bond. I would recommend this to couples going through a difficult phase." },
+    { name: "Bhavna Kulkarni", place: "Nashik", tag: "In-Laws & Married Life",
+      quote: "After marriage, I was having a very difficult time adjusting with my in-laws. The compassionate guidance and simple astrological remedies helped me approach situations with more patience and positivity. I learned how to handle difficult situations calmly instead of reacting emotionally. Today, there is much more happiness and peace in my married life. Very warm and genuine support!" }
   ];
 
   var track = document.getElementById("marquee-track");
   if (track) {
     var html = testimonials.map(renderCard).join("");
     track.innerHTML = html + html; /* duplicated once for a seamless loop */
+    setupMarquee(track);
+  }
+
+  function setupMarquee(track) {
+    var marquee = track.parentElement;
+    var phone = window.matchMedia("(max-width: 768px)");
+    function speed() { return phone.matches ? 35 : 85; } /* px per second */
+    var resumeTimer;
+
+    function setDuration() {
+      var loopWidth = track.scrollWidth / 2;
+      if (loopWidth) marquee.style.setProperty("--marquee-duration", Math.round(loopWidth / speed()) + "s");
+    }
+    setDuration();
+    window.addEventListener("resize", setDuration);
+    phone.addEventListener("change", setDuration);
+
+    function pause() {
+      clearTimeout(resumeTimer);
+      marquee.classList.add("is-paused");
+    }
+    function resumeSoon() {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function () { marquee.classList.remove("is-paused"); }, 4000);
+    }
+    marquee.addEventListener("pointerdown", pause);
+    marquee.addEventListener("pointerup", resumeSoon);
+    marquee.addEventListener("pointercancel", resumeSoon);
   }
 
   function initials(name) {
