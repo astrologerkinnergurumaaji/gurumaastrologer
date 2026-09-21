@@ -346,13 +346,13 @@ section{ padding-block:clamp(56px,8vw,92px); position:relative; }
    About
    ========================================================================== */
 .about{ background:var(--surface); border-block:1px solid var(--line); }
-.about .container{
+.about > .container:first-of-type{
   display:grid;
   grid-template-columns:.85fr 1.15fr;
   gap:clamp(30px,5vw,64px);
   align-items:center;
 }
-@media (max-width:900px){ .about .container{ grid-template-columns:1fr; } }
+@media (max-width:900px){ .about > .container:first-of-type{ grid-template-columns:1fr; } }
 
 .about-media{
   border-radius:22px;
