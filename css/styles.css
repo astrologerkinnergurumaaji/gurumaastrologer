@@ -269,6 +269,11 @@ section{ padding-block:clamp(56px,8vw,92px); position:relative; }
   font-weight:700;
   line-height:1.06;
 }
+.hero-copy h1 .h1-sub{
+  font-size:0.4em;
+  font-weight:600;
+  color:var(--ink-soft);
+}
 .hero-copy .lede{
   margin-top:18px;
   font-size:16.5px;
@@ -676,7 +681,7 @@ section{ padding-block:clamp(56px,8vw,92px); position:relative; }
   display:flex; align-items:center; justify-content:center;
 }
 .contact-card .icon svg{ width:24px; height:24px; stroke:var(--primary-ink); }
-.contact-card h3{ font-size:18px; font-weight:700; }
+.contact-card .card-title{ font-size:18px; font-weight:700; color:var(--ink); }
 .contact-card p{ margin-top:8px; font-size:14px; color:var(--ink-soft); }
 .contact-card .value{ margin-top:10px; font-weight:700; color:var(--primary); font-size:15px; overflow-wrap:anywhere; }
 
@@ -702,7 +707,7 @@ section{ padding-block:clamp(56px,8vw,92px); position:relative; }
   color:#fff;
 }
 .footer-col p{ font-size:13.5px; line-height:1.75; max-width:32ch; color:rgba(251,246,236,.7); }
-.footer-col h4{
+.footer-col .footer-heading{
   font-family:'Karla', sans-serif;
   font-size:11.5px;
   font-weight:700;
