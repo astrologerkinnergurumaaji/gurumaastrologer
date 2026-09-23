@@ -1,6 +1,21 @@
 (function () {
   "use strict";
 
+  /* ---------- swap the preloaded fonts stylesheet to active ---------- */
+  var fontPreload = document.getElementById("font-preload");
+  if (fontPreload) fontPreload.rel = "stylesheet";
+
+  /* ---------- build mailto links from data attributes (keeps the address out of the static HTML) ---------- */
+  document.querySelectorAll("[data-email-user]").forEach(function (el) {
+    var address = el.getAttribute("data-email-user") + "@" + el.getAttribute("data-email-domain");
+    el.href = "mailto:" + address;
+    if (el.hasAttribute("data-email-text")) el.textContent = address;
+  });
+  document.querySelectorAll("[data-email-text]:not([data-email-user])").forEach(function (el) {
+    var parent = el.closest("[data-email-user]");
+    if (parent) el.textContent = parent.getAttribute("data-email-user") + "@" + parent.getAttribute("data-email-domain");
+  });
+
   /* ---------- mobile nav ---------- */
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
